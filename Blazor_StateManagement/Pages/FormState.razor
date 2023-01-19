@@ -1,0 +1,25 @@
+﻿@page "/FormState"
+@using Blazor_StateManagement.Models
+@inject ProfileState profileState
+
+<h3>Form State Page 1</h3>
+
+<EditForm Model="profileState">
+    <div class="form-control">
+        <div class="m-3">
+            <label>First Name</label>
+            <InputText  @bind-Value="profileState.FirstName"></InputText>
+        </div>
+         <div class="m-3">
+            <label>Last Name</label>
+            <InputText  @bind-Value="profileState.LastName"></InputText>
+        </div>
+        <button class="btn btn-primary">Submit</button>
+    </div>
+</EditForm>
+
+
+@code {
+    //Profile profile = new();
+
+}

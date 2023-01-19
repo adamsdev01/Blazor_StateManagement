@@ -1,5 +1,4 @@
-﻿using Blazor_StateManagement.Data.StateService;
-using Blazor_StateManagement.Models;
+﻿using Blazor_StateManagement.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace Blazor_StateManagement.Data
@@ -21,12 +20,10 @@ namespace Blazor_StateManagement.Data
             return category;
         }
 
-        public async Task<Product> AddProduct(Product product, StateContainerService state)
+        public async Task<Product> AddProduct(Product product)
         {
             appDbContext.Add(product);
             await appDbContext.SaveChangesAsync();
-
-            product.ProductId = state.Product.ProductId;
 
             return product;
         }

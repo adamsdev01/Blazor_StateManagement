@@ -20,19 +20,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Models\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <UpToDateCheckInput Remove="Pages\SendComponent.razor" />
   </ItemGroup>
 
   <ItemGroup>
     <_ContentIncludedByDefault Remove="Pages\SendComponent.razor" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Include="Pages\SendComponent.razor" />
   </ItemGroup>
 
 </Project>

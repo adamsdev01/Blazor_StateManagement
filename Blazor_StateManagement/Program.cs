@@ -1,9 +1,6 @@
 using Blazor_StateManagement.Data;
-using Blazor_StateManagement.Data.StateService;
 using Blazor_StateManagement.Models;
-using Blazor_StateManagement.ViewModels;
-using Microsoft.AspNetCore.Components;
-using Microsoft.AspNetCore.Components.Web;
+using Blazor_StateManagement.StateObjects;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -11,9 +8,8 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
-builder.Services.AddScoped<StateContainerService>();
 builder.Services.AddScoped<DataService>();
-builder.Services.AddScoped<ICategoryViewModel, CategoryViewModel>();
+builder.Services.AddScoped<ProfileState>();
 
 // Register Database
 builder.Services.AddDbContext<BlazorStateDbContext>(options =>
